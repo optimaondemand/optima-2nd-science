@@ -365,6 +365,9 @@ body{font-family:'Nunito','Century Gothic','Arial Rounded MT Bold',Verdana,sans-
 .web-strand{opacity:0;transition:opacity .6s}
 .web-strand.visible{opacity:1}
 </style>
+    <div style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border:2px solid #90CAF9;border-radius:12px;padding:14px 18px;margin-bottom:20px;text-align:center;font-size:15px;font-weight:700;color:#1565C0;line-height:1.5">
+      📝 <strong>Note for families:</strong> Please submit your work from the assignment image above. The interactive below is just for extra practice and fun &mdash; no need to submit it!
+    </div>
 <div class="gw">
   <div class="gh"><div class="gh-ico">🎮</div><div><div class="gh-lbl">Mini Game</div><div class="gh-ttl">Spin the Web!</div></div></div>
   <div class="gb">
@@ -404,7 +407,7 @@ function renderQ(){
   var qa=document.getElementById('w-qa');
   if(cur>=QS.length){qa.innerHTML='';return;}
   var q=QS[cur];
-  qa.innerHTML='<div class="q-card"><div class="q-txt">'+q.q+'</div><div class="tf-btns"><button class="tf-btn" onclick="wAns(true)">✅ TRUE</button><button class="tf-btn" onclick="wAns(false)">❌ FALSE</button></div><div class="q-result" id="w-res"></div></div>';
+  qa.innerHTML='<div class="q-card"><div class="q-txt">'+q.q+'</div><div class="tf-btns"><button type="button" class="tf-btn" onclick="wAns(true)">✅ TRUE</button><button type="button" class="tf-btn" onclick="wAns(false)">❌ FALSE</button></div><div class="q-result" id="w-res"></div></div>';
 }
 window.wAns=function(ans){
   var q=QS[cur];var correct=(ans===q.ans);
